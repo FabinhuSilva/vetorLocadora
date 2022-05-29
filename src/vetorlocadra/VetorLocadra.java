@@ -29,12 +29,12 @@ public class VetorLocadra {
                         
             contador++;
             
-    }while(contador <= clienteLocadora.length);
+    }while(contador <= 2);
         
         for(int contLaco=0;contLaco < clienteLocadora.length;contLaco++){
-            int locacaoGratis = quantidadeLocacaoDVD[contLaco]%10;
+            int locacaoGratis = quantidadeLocacaoDVD[contLaco]/10;
                  System.out.println(clienteLocadora[contLaco]+" Teve "+quantidadeLocacaoDVD[contLaco]+" "
-                 + "terá "+locacaoGratis+"Locações Gratuitas");
+                 + " terá "+locacaoGratis+" Locações Gratuitas");
               
           }
     
