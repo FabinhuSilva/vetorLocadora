@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package vetorlocadra;
+
+import java.util.Scanner;
 
 /**
  *
@@ -15,7 +13,30 @@ public class VetorLocadra {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        
+        String clienteLocadora[] = new String[3];
+        int quantidadeLocacaoDVD[] = new int [3];
+        int contador=0;
+        Scanner lerTeclado = new Scanner(System.in);
+       
+        do{
+        
+            System.out.println("Digite o Nome do cliente: ");
+            clienteLocadora[contador] = lerTeclado.nextLine();
+                      
+            System.out.println("Digite a quantidade de DVD Locada por "+clienteLocadora[contador]+" : ");
+            quantidadeLocacaoDVD[contador] = lerTeclado.nextInt();
+                        
+            contador++;
+            
+    }while(contador <= clienteLocadora.length);
+        
+        for(int contLaco=0;contLaco < clienteLocadora.length;contLaco++){
+            int locacaoGratis = quantidadeLocacaoDVD[contLaco]%10;
+                 System.out.println(clienteLocadora[contLaco]+" Teve "+quantidadeLocacaoDVD[contLaco]+" "
+                 + "terá "+locacaoGratis+"Locações Gratuitas");
+              
+          }
     
+    }
 }
